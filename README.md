@@ -1,15 +1,14 @@
 ## MTSCCleave: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites
-# Pending
-- [x] Upload the datasets to https://timeseriesclassification.com/ after publication. :heavy_check_mark:
+Hello World.
+# Updates
 
-### Solar System Exploration, 1950s – 1960s
+# Instructions
 
-- [ ] Mercury
-- [x] Venus
-- [x] Earth (Orbit/Moon)
-- [x] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
+# Quick links
+
+# Pending tasks
+- Upload the datasets to https://timeseriesclassification.com after publication.
+
+# Temp
+For style reference:
+- https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/README.md
