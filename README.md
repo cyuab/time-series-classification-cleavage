@@ -8,6 +8,7 @@ Hello World.
 
 ## Pending tasks
 - Upload the datasets to https://timeseriesclassification.com after publication.
+- Update the Authors' information in Quick links after publication.
 
 ## Temp
 For style reference:
