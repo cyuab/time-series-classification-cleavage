@@ -1,14 +1,14 @@
 ## MTSCCleave: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites
 Hello World.
-# Updates
+## Updates
 
-# Instructions
+## Instructions
 
-# Quick links
+## Quick links
 
-# Pending tasks
+## Pending tasks
 - Upload the datasets to https://timeseriesclassification.com after publication.
 
-# Temp
+## Temp
 For style reference:
 - https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/README.md
