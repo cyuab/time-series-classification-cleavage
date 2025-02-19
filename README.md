@@ -11,6 +11,9 @@ Hello World.
 - Update the Authors' information in Quick links after publication.
 - Make a video (YouTube) presentation
 
+## Testing
+- Edited on lgpu2
+
 ## Temp
 For style reference:
 - https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/README.md
