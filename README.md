@@ -2,6 +2,16 @@
 Hello World.
 ## Updates
 
+## Installation
+Create a new environment for MTSCCleave:
+```
+conda create -n mtsccleave python=3.12
+```
+Next, activate the environment and pull MTSCCleave from PyPI:
+```
+conda activate mtsccleave
+pip install mtsccleave
+```
 ## Instructions
 
 ## Quick links
