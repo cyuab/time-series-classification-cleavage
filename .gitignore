@@ -1,6 +1,8 @@
 temp/
 sota/
 
+99_Archive.ipynb
+
 # General
 .DS_Store
 .AppleDouble
