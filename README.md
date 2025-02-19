@@ -9,6 +9,7 @@ Hello World.
 ## Pending tasks
 - Upload the datasets to https://timeseriesclassification.com after publication.
 - Update the Authors' information in Quick links after publication.
+- Make a video (YouTube) presentation
 
 ## Temp
 For style reference:
