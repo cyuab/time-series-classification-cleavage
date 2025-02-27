@@ -1,5 +1,6 @@
 temp/
 sota/
+notebooks/99_temp.ipynb
 
 # General
 .DS_Store
