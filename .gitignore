@@ -1,5 +1,6 @@
 temp/
 sota/
+__pycache__/
 notebooks/99_temp.ipynb
 
 # General
