@@ -45,16 +45,16 @@ def transform_single_multi_diff(seq, prob_seq, use_prob_seq): #ts: time series
         else:
             prob = 1
         if seq[i] == 'A':
-            ts_1[j] = 2 * prob
-            j += 1
-        elif seq[i] == 'G':
             ts_1[j] = 1 * prob
             j += 1
+        elif seq[i] == 'G':
+            ts_1[j] = -1 * prob
+            j += 1
         elif seq[i] == 'C':
-            ts_2[k] = -1 * prob
+            ts_2[k] = 1 * prob
             k += 1
         elif seq[i] == 'U':
-            ts_2[k] = -2 * prob
+            ts_2[k] = -1 * prob
             k += 1
         elif seq[i] == '_':
             # Do nothing
@@ -76,17 +76,17 @@ def transform_single_multi_eq(seq, prob_seq, use_prob_seq): #ts: time series
         else:
             prob = 1
         if seq[i] == 'A':
-            ts_1[i] = 2 * prob
+            ts_1[i] = 1 * prob
             ts_2[i] = 0
         elif seq[i] == 'G':
-            ts_1[i] = 1 * prob
+            ts_1[i] = -1 * prob
             ts_2[i] = 0
         elif seq[i] == 'C':
             ts_1[i] = 0
-            ts_2[i] = -1 * prob
+            ts_2[i] = 1 * prob
         elif seq[i] == 'U':
             ts_1[i] = 0
-            ts_2[i] = -2 * prob
+            ts_2[i] = -1 * prob
         elif seq[i] == '_':
             ts_1[i] = 0
             ts_2[i] = 0
