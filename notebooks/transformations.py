@@ -1,5 +1,5 @@
-def hello():
-    print("Hello World!")
+def hello(input1=None, input2=None):
+    print("Hello World! 03-23 2")
 
 # https://stackoverflow.com/questions/37130146/is-it-possible-to-detect-the-number-of-return-values-of-a-function-in-python
 def transform_original(seq, prob_seq, use_prob_seq):
