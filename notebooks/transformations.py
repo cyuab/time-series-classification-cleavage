@@ -1,5 +1,5 @@
-def hello(input1=None, input2=None):
-    print("Hello World! 03-23 2")
+def hello(input1, input2=None):
+    print("Hello World! 03-23 3")
 
 # https://stackoverflow.com/questions/37130146/is-it-possible-to-detect-the-number-of-return-values-of-a-function-in-python
 def transform_original(seq, prob_seq, use_prob_seq):
@@ -116,6 +116,8 @@ def transform_cum(seq, prob_seq, use_prob_seq): #ts: time series
         else:
             raise ValueError('The sequence contains invalid characters')  
     return ts, None
+
+
 
 def transform_cum_multi_diff(seq, prob_seq, use_prob_seq): #ts: time series
     ts_1 = [None] * (len(seq)+1)
