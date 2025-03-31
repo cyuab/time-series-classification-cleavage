@@ -2,18 +2,18 @@ def hello(input1, input2=None):
     print("Hello World! 03-23 3")
 
 # https://stackoverflow.com/questions/37130146/is-it-possible-to-detect-the-number-of-return-values-of-a-function-in-python
-def transform_original(seq, prob_seq, use_prob_seq):
+def transform_original(seq, seq_prob=None, prefix=None, prefix_prob=None):
     # prob_seq is for dummy purpose to ensure all the transformations have the same input parameters
     # So I can run a function on the function list
     return seq, None
 
-def transform_single(seq, prob_seq, use_prob_seq): #ts: time series
+def transform_single(seq, seq_prob=None, prefix=None, prefix_prob=None):
     # prob_seq is for dummy purpose to ensure all the transformations have the same input parameters
     # So I can run a function on the function list
     ts = [None] * len(seq)
     for i in range(len(seq)):
-        if use_prob_seq:
-            prob = prob_seq[i]
+        if seq_prob:
+            prob = seq_prob[i]
         else:
             prob = 1
         if seq[i] == 'A':
@@ -30,7 +30,7 @@ def transform_single(seq, prob_seq, use_prob_seq): #ts: time series
             raise ValueError('The sequence contains invalid characters')  
     return ts, None
 
-def transform_single_multi_diff(seq, prob_seq, use_prob_seq): #ts: time series
+def transform_single_multi_diff(seq, seq_prob=None, prefix=None, prefix_prob=None):
     # prob_seq is for dummy purpose to ensure all the transformations have the same input parameters
     # So I can run a function on the function list
     ts_1 = [None] * len(seq)
@@ -40,8 +40,8 @@ def transform_single_multi_diff(seq, prob_seq, use_prob_seq): #ts: time series
     ts_1[j] = 0
     ts_2[k] = 0
     for i in range(len(seq)):
-        if use_prob_seq:
-            prob = prob_seq[i]
+        if seq_prob:
+            prob = seq_prob[i]
         else:
             prob = 1
         if seq[i] == 'A':
@@ -63,7 +63,7 @@ def transform_single_multi_diff(seq, prob_seq, use_prob_seq): #ts: time series
             raise ValueError('The sequence contains invalid characters')  
     return ts_1[0:j], ts_2[0:k]
 
-def transform_single_multi_eq(seq, prob_seq, use_prob_seq): #ts: time series
+def transform_single_multi_eq(seq, seq_prob=None, prefix=None, prefix_prob=None):
     # prob_seq is for dummy purpose to ensure all the transformations have the same input parameters
     # So I can run a function on the function list
     ts_1 = [None] * len(seq)
@@ -71,8 +71,8 @@ def transform_single_multi_eq(seq, prob_seq, use_prob_seq): #ts: time series
     ts_1[0] = 0
     ts_2[0] = 0
     for i in range(len(seq)):
-        if use_prob_seq:
-            prob = prob_seq[i]
+        if seq_prob:
+            prob = seq_prob[i]
         else:
             prob = 1
         if seq[i] == 'A':
@@ -94,13 +94,14 @@ def transform_single_multi_eq(seq, prob_seq, use_prob_seq): #ts: time series
             raise ValueError('The sequence contains invalid characters')  
     return ts_1, ts_2
 
-
-def transform_cum(seq, prob_seq, use_prob_seq): #ts: time series
+def transform_cum(seq, seq_prob=None, prefix=None, prefix_prob=None):
+    if prefix:
+        ts1, ts2 = transform_cum(prefix, prefix_prob)
     ts = [None] * (len(seq)+1)
     ts[0] = 0
     for i in range(len(seq)):
-        if use_prob_seq:
-            prob = prob_seq[i]
+        if seq_prob:
+            prob = seq_prob[i]
         else:
             prob = 1
         if seq[i] == 'A':
@@ -114,12 +115,15 @@ def transform_cum(seq, prob_seq, use_prob_seq): #ts: time series
         elif seq[i] == '_':
             ts[i+1] = ts[i]
         else:
-            raise ValueError('The sequence contains invalid characters')  
-    return ts, None
-
-
-
-def transform_cum_multi_diff(seq, prob_seq, use_prob_seq): #ts: time series
+            raise ValueError('The sequence contains invalid characters')
+    try:
+        return ([x + ts1[-1] for x in ts]), None
+    except:
+        return ts, None
+    
+def transform_cum_multi_diff(seq, seq_prob=None, prefix=None, prefix_prob=None):
+    if prefix:
+        res1, res2 = transform_cum_multi_diff(prefix, prefix_prob) 
     ts_1 = [None] * (len(seq)+1)
     ts_2= [None] * (len(seq)+1)
     j = 0
@@ -127,8 +131,8 @@ def transform_cum_multi_diff(seq, prob_seq, use_prob_seq): #ts: time series
     ts_1[j] = 0
     ts_2[k] = 0
     for i in range(len(seq)):
-        if use_prob_seq:
-            prob = prob_seq[i]
+        if seq_prob:
+            prob = seq_prob[i]
         else:
             prob = 1
         if seq[i] == 'A':
@@ -148,16 +152,21 @@ def transform_cum_multi_diff(seq, prob_seq, use_prob_seq): #ts: time series
             pass
         else:
             raise ValueError('The sequence contains invalid characters')  
-    return ts_1[0:j+1], ts_2[0:k+1]
+    try:
+        return ([x + res1[-1] for x in ts_1[0:j+1]]), ([x + res2[-1] for x in ts_2[0:k+1]])
+    except:
+        return ts_1[0:j+1], ts_2[0:k+1]
 
-def transform_cum_multi_eq(seq, prob_seq, use_prob_seq): #ts: time series
+def transform_cum_multi_eq(seq, seq_prob=None, prefix=None, prefix_prob=None):
+    if prefix:
+        res1, res2 = transform_cum_multi_eq(prefix, prefix_prob) 
     ts_1 = [None] * (len(seq)+1)
     ts_2= [None] * (len(seq)+1)
     ts_1[0] = 0
     ts_2[0] = 0
     for i in range(len(seq)):
-        if use_prob_seq:
-            prob = prob_seq[i]
+        if seq_prob:
+            prob = seq_prob[i]
         else:
             prob = 1
         if seq[i] == 'A':
@@ -177,5 +186,8 @@ def transform_cum_multi_eq(seq, prob_seq, use_prob_seq): #ts: time series
             ts_2[i+1] = ts_2[i] + 0
         else:
             raise ValueError('The sequence contains invalid characters')  
-    return ts_1, ts_2
+    try:
+        return ([x + res1[-1] for x in ts_1]), ([x + res2[-1] for x in ts_2])
+    except:
+        return ts_1, ts_2
 
