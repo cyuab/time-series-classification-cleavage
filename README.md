@@ -1,6 +1,79 @@
-## MTSCCleave: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites
-Hello World.
-## Updates
+# MTSCCleave: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites
+## Notifications
+
+## Installation
+```
+conda create -n mtsccleav python=3.12
+conda activate mtsccleav
+pip install sktime
+pip install --upgrade numba
+pip install matplotlib
+pip install seaborn
+pip install biopython
+# https://viennarna.readthedocs.io/en/latest/api_python.html
+python -m pip install viennarna
+pip install -U aeon[all_extras]
+# If "no matches found" error appears, try below command.
+pip install -U aeon"[all_extras]"
+```
+Other useful commands
+```
+# Delete the environment if needed.
+conda env remove -n mtsccleav
+# List the existing environments
+conda env list
+# Deactivate the environment
+conda deactivate
+```
+## Structure of this repository
+## Corresponding paper
+### Figures in the paper
+## Resources
+Other studies related to human Dicer cleavage site prediction (Newest first):
+- [DiCleavePlus](https://github.com/MGuard0303/DiCleavePlus)
+- [DiCleave](https://github.com/MGuard0303/DiCleave)
+- [ReCGBM](https://github.com/ryuu90/ReCGBM)
+
+Some useful time series libraries:
+- [sktime](https://www.sktime.net/en/stable/)
+- [tslearn](https://tslearn.readthedocs.io/en/stable/)
+- [aeon](https://www.aeon-toolkit.org/en/stable/index.html)
+- [tsai](https://timeseriesai.github.io/tsai/)
+- [pyts](https://pyts.readthedocs.io/en/stable/index.html)
+- time series distances
+    - [DTAIDistance](https://dtaidistance.readthedocs.io/en/latest/)
+- Others
+    - [stumpy](https://stumpy.readthedocs.io/en/latest/) (Matrix Profile)
+    - [SAX-VSM](https://jmotif.github.io/sax-vsm_site/) (a.k.a. jmotif, in Java)
+    
+Some biological computation libraries:
+- [ViennaRNA](https://viennarna.readthedocs.io/en/latest/index.html)
+- [Biopython](https://biopython.org/)
+
+## Pending tasks
+1. Upload the datasets to https://timeseriesclassification.com after publication.
+1. Update the Authors' information.
+1. Make a video (YouTube) presentation.
+## Contacts
+
+## Temp
+
+
+```
+pip install tsai
+# Downgrade fastcore for compatibility with tsai 
+pip install fastcore==1.5.29
+# Downgrade scikit for compatibility with tsai 
+pip install scikit-learn==1.1.3
+conda create -n tsai_env python=3.10 -y
+conda activate tsai_env
+pip install tsai==0.3.6 fastai==2.7.12 fastcore==1.5.29 scikit-learn==1.1.3
+pip install --force-reinstall numpy pandas scikit-learn fastai
+pip install --force-reinstall fastcore==1.5.29
+pip install xgboost
+pip install lightgbm
+```
+
 
 ## Installation
 Create a new environment for MTSCCleave:
@@ -12,18 +85,6 @@ Next, activate the environment and pull MTSCCleave from PyPI:
 conda activate mtsccleave
 pip install mtsccleave
 ```
-## Instructions
-
-## Quick links
-
-## Pending tasks
-- Upload the datasets to https://timeseriesclassification.com after publication.
-- Update the Authors' information in Quick links after publication.
-- Make a video (YouTube) presentation
-
-## Testing
-- Edited on lgpu2
-
 ## Temp
 For style reference:
 - https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/README.md
