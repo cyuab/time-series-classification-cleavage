@@ -74,3 +74,36 @@ def construct_X(ts_panel, include_five_p_cleav, include_prob, include_ss):
     neg_instances.index = neg_instances.index.map(lambda idx: (idx[0] + pos_instances_len, idx[1])) 
     X = pd.concat([pos_instances, neg_instances], axis=0)
     return X  
+
+def pad_multiindex_ts(df, pad_value=0):
+    """
+    Pads each time series (per instance) in a MultiIndex DataFrame to equal length.
+    
+    Parameters:
+        df: pd.DataFrame with MultiIndex (instance, time)
+        pad_value: value to use for padding
+
+    Returns:
+        padded_df: pd.DataFrame with same MultiIndex structure, all time series equal length
+    """
+    instances = df.index.get_level_values(0).unique()
+    time_lengths = df.groupby(level=0).size()
+    max_len = time_lengths.max()
+
+    padded_dfs = []
+
+    for instance in instances:
+        ts = df.loc[instance]
+        pad_len = max_len - len(ts)
+        if pad_len > 0:
+            pad_df = pd.DataFrame(
+                pad_value,
+                index=pd.RangeIndex(len(ts), len(ts) + pad_len),
+                columns=ts.columns
+            )
+            ts = pd.concat([ts, pad_df])
+        # Rebuild MultiIndex
+        ts.index = pd.MultiIndex.from_product([[instance], ts.index])
+        padded_dfs.append(ts)
+
+    return pd.concat(padded_dfs)
