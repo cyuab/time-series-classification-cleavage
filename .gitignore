@@ -1,9 +1,7 @@
-sota/DiCleave/DiCleavePlus-main
-sota/DiCleave/DiCleave-main
-sota/ReCGBM/ReCGBM-master
-# temp/
-# notebooks/99_temp.ipynb
-# __pycache__/
+code/__pycache__/
+code/sota/DiCleavePlus-main/
+code/sota/DiCleave-main/
+code/sota/ReCGBM-master/
 
 # General
 .DS_Store
