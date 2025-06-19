@@ -3,6 +3,7 @@
 <!-- for d in *.pdf ; do inkscape --without-gui --file=$d --export-plain-svg=${d%.*}.svg ; done -->
 ![hsa-let-7a-1 with Secondary Structure](figures/hsa-let-7a-1_ss.svg.pptx.svg)
 - This figure shows the secondary structure of pre-miRNA "hsa-let-7a-1". The two scissor symbols indicates the two cleavage sites on 5' arm and 3' arm.
+    - The colors on the nodes reflect the probability of the base pair in this predicted secondary structure.
     - The 27-28 bond (i.e., the bond between 27th nucleotide and 28th nucleotide) and the 56-57 bond are the cleavage sites.
     - The "scissors" are the human Dicer.
 
