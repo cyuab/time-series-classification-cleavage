@@ -77,14 +77,7 @@ def construct_X(ts_panel, include_five_p_cleav, include_prob, include_ss):
 
 def pad_multiindex_ts(df, pad_value=0):
     """
-    Pads each time series (per instance) in a MultiIndex DataFrame to equal length.
-    
-    Parameters:
-        df: pd.DataFrame with MultiIndex (instance, time)
-        pad_value: value to use for padding
-
-    Returns:
-        padded_df: pd.DataFrame with same MultiIndex structure, all time series equal length
+    Pads (with pad_value=0) each time series (per instance) in a MultiIndex DataFrame (df) to equal length.
     """
     instances = df.index.get_level_values(0).unique()
     time_lengths = df.groupby(level=0).size()
