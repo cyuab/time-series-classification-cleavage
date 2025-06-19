@@ -3,6 +3,8 @@
 <!-- for d in *.pdf ; do inkscape --without-gui --file=$d --export-plain-svg=${d%.*}.svg ; done -->
 ![hsa-let-7a-1 with Secondary Structure](figures/hsa-let-7a-1_ss.svg.pptx.svg)
 - This figure shows the secondary structure of pre-miRNA "hsa-let-7a-1". The two scissor symbols indicates the two cleavage sites on 5' arm and 3' arm.
+    - The 27-28 bond (i.e., the bond between 27th nucleotide and 28th nucleotide) and the 56-57 bond are the cleavage sites.
+    - The "scissors" are the human Dicer.
 
 ## Notifications
 
@@ -34,16 +36,16 @@ conda deactivate
 ```bash
 .
 ├── code
-│   ├── classify_aeon.ipynb
-│   ├── classify_sktime.ipynb
+│   ├── classify_aeon.ipynb # Testing convolution-based classifiers using aeon library
+│   ├── classify_sktime.ipynb # Testing convolution-based classifiers using sktime library
 │   ├── classify.ipynb
-│   ├── interpret.ipynb
-│   ├── mtsccleav.py
-│   ├── prepare_datasets.ipynb
-│   ├── rocket_convolution_ex.ipynb
+│   ├── interpret.ipynb # Check which part in the multivariate is important for classification
+│   ├── mtsccleav.py # General library used for this project
+│   ├── prepare_datasets.ipynb # Prepare the miRNA dataset
+│   ├── rocket_convolution_ex.ipynb # Convolution examples for Rocket
 │   ├── sota
-│   │   ├── DiCleave-data
-│   ├── transformations.py
+│   │   ├── DiCleave-data # Compare the result with the SOTA, DiCleave
+│   ├── transformations.py # time series transformation methods
 ├── data
 ├── figures
 ├── README.md
