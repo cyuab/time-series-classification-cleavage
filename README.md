@@ -1,4 +1,9 @@
 # MTSCCleave: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites
+<!-- https://stackoverflow.com/questions/39777166/display-pdf-image-in-markdown -->
+<!-- for d in *.pdf ; do inkscape --without-gui --file=$d --export-plain-svg=${d%.*}.svg ; done -->
+![hsa-let-7a-1 with Secondary Structure](figures/hsa-let-7a-1_ss.svg.pptx.svg)
+- This figure shows the secondary structure of pre-miRNA "hsa-let-7a-1". The two scissor symbols indicates the two cleavage sites on 5' arm and 3' arm.
+
 ## Notifications
 
 ## Installation
@@ -26,6 +31,24 @@ conda env list
 conda deactivate
 ```
 ## Structure of this repository
+```bash
+.
+├── code
+│   ├── classify_aeon.ipynb
+│   ├── classify_sktime.ipynb
+│   ├── classify.ipynb
+│   ├── interpret.ipynb
+│   ├── mtsccleav.py
+│   ├── prepare_datasets.ipynb
+│   ├── rocket_convolution_ex.ipynb
+│   ├── sota
+│   │   ├── DiCleave-data
+│   ├── transformations.py
+├── data
+├── figures
+├── README.md
+└── results
+```
 ## Corresponding paper
 ### Figures in the paper
 ## Resources
@@ -56,9 +79,8 @@ Some biological computation libraries:
 1. Make a video (YouTube) presentation.
 ## Contacts
 
-## Temp
-
-
+## MISC
+Testing for tsai
 ```
 pip install tsai
 # Downgrade fastcore for compatibility with tsai 
@@ -74,17 +96,6 @@ pip install xgboost
 pip install lightgbm
 ```
 
-
-## Installation
-Create a new environment for MTSCCleave:
-```
-conda create -n mtsccleave python=3.12
-```
-Next, activate the environment and pull MTSCCleave from PyPI:
-```
-conda activate mtsccleave
-pip install mtsccleave
-```
-## Temp
-For style reference:
+For project management style reference:
 - https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/README.md
+
