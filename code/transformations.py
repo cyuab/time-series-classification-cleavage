@@ -1,5 +1,5 @@
 def hello(input1, input2=None):
-    print("Hello World!3")
+    print("Hello World!")
 
 def print_list_3dp(my_list):
     my_formatted_list = [ '%.3f' % elem for elem in  my_list]
@@ -240,6 +240,82 @@ def transform_cum_multi_eq(seq, seq_prob=None, prefix=None, prefix_prob=None):
             ts_1[i+1] = ts_1[i] - 1 * prob
             ts_2[i+1] = ts_2[i]
         elif seq[i] == 'G':
+            ts_1[i+1] = ts_1[i]
+            ts_2[i+1] = ts_2[i] + 1 * prob
+        elif seq[i] == 'C':
+            ts_1[i+1] = ts_1[i]
+            ts_2[i+1] = ts_2[i] - 1 * prob
+        elif seq[i] == '_':
+            ts_1[i+1] = ts_1[i]
+            ts_2[i+1] = ts_2[i]
+        else:
+            raise ValueError('The sequence contains invalid characters')  
+    try:
+        return ([x + res1[-1] for x in ts_1]), ([x + res2[-1] for x in ts_2])
+    except:
+        return ts_1, ts_2
+
+def transform_cum_multi_diff_reverse(seq, seq_prob=None, prefix=None, prefix_prob=None):
+    """
+    Cumulative grouped variable-length channel mappingng
+    """
+    if prefix:
+        res1, res2 = transform_cum_multi_diff_reverse(prefix, prefix_prob) 
+    ts_1 = [None] * (len(seq)+1)
+    ts_2= [None] * (len(seq)+1)
+    j = 0
+    k = 0
+    ts_1[j] = 0
+    ts_2[k] = 0
+    for i in range(len(seq)):
+        if seq_prob:
+            prob = seq_prob[i]
+        else:
+            prob = 1
+        if seq[i] == 'G':
+            ts_1[j+1] = ts_1[j] + 1 * prob
+            j += 1
+        elif seq[i] == 'U':
+            ts_1[j+1] = ts_1[j] - 1 * prob
+            j += 1
+        elif seq[i] == 'A':
+            ts_2[k+1] = ts_2[k] + 1 * prob
+            k += 1
+        elif seq[i] == 'C':
+            ts_2[k+1] = ts_2[k] - 1 * prob
+            k += 1
+        elif seq[i] == '_':
+            # Do nothing
+            pass
+        else:
+            raise ValueError('The sequence contains invalid characters')  
+    try:
+        return ([x + res1[-1] for x in ts_1[0:j+1]]), ([x + res2[-1] for x in ts_2[0:k+1]])
+    except:
+        return ts_1[0:j+1], ts_2[0:k+1]
+
+def transform_cum_multi_eq_reverse(seq, seq_prob=None, prefix=None, prefix_prob=None):
+    """
+    Cumulative grouped fixed-length channel mappingng
+    """
+    if prefix:
+        res1, res2 = transform_cum_multi_eq_reverse(prefix, prefix_prob) 
+    ts_1 = [None] * (len(seq)+1)
+    ts_2= [None] * (len(seq)+1)
+    ts_1[0] = 0
+    ts_2[0] = 0
+    for i in range(len(seq)):
+        if seq_prob:
+            prob = seq_prob[i]
+        else:
+            prob = 1
+        if seq[i] == 'G':
+            ts_1[i+1] = ts_1[i] + 1 * prob
+            ts_2[i+1] = ts_2[i]
+        elif seq[i] == 'U':
+            ts_1[i+1] = ts_1[i] - 1 * prob
+            ts_2[i+1] = ts_2[i]
+        elif seq[i] == 'A':
             ts_1[i+1] = ts_1[i]
             ts_2[i+1] = ts_2[i] + 1 * prob
         elif seq[i] == 'C':
