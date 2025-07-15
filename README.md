@@ -58,7 +58,7 @@ conda deactivate
 ├── code
 │   ├── classify_aeon.ipynb # Testing convolution-based classifiers using aeon library
 │   ├── classify_sktime.ipynb # Testing convolution-based classifiers using sktime library
-│   ├── classify.ipynb ##
+│   ├── classify.ipynb
 │   ├── hydra_convolution.ipynb # Convolution used in Hydra
 │   ├── interpret.ipynb # Check which subsequence in the multivariate time series is important for classification
 │   ├── mtsccleav.py # General library used for this project
@@ -120,7 +120,7 @@ Some biological computation libraries:
 - It will be updated after paper acceptance.
 
 # MISC
-For testing tsai
+For testing tsai:
 ```
 pip install tsai
 # Downgrade fastcore for compatibility with tsai 
