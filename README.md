@@ -61,17 +61,17 @@ conda deactivate
 │   ├── classify.ipynb ##
 │   ├── hydra_convolution.ipynb # Convolution used in Hydra
 │   ├── interpret.ipynb ## Check which part in the multivariate is important for classification
-│   ├── mtsccleav.py ## General library used for this project
+│   ├── mtsccleav.py # General library used for this project
 │   ├── plot_cd.ipynb
 │   ├── prepare_datasets.ipynb ## Prepare the miRNA dataset
 │   ├── rocket_convolution_examples.ipynb # Convolution examples for ROCKET
-│   ├── sota ## Compare the result with the SOTA, DiCleave
-│   │   ├── DiCleave-data ##
-│   │   ├── DiCleave-main ##
-│   │   ├── DiCleave-main-e512d74.zip ##
-│   │   ├── evaluate_dicleave.ipynb ##
+│   ├── sota # Compare the result with the SOTA, DiCleave
+│   │   ├── DiCleave-data # Store our training data for DiCleave and results returned by DiCleave
+│   │   ├── DiCleave-main # This is created by unzipping "DiCleave-main-e512d74.zip"
+│   │   ├── DiCleave-main-e512d74.zip # With the latest commit (e512d74), accessed on 2025-06-17
+│   │   ├── evaluate_dicleave.ipynb # It should be placed inside folder "DiCleave-main" for correct path.
 │   ├── test_transformations.ipynb ##
-│   └── transformations.py ## time series transformation methods
+│   └── transformations.py # time series transformation methods
 ├── data
 ├── figures
 └── README.md # This page.
