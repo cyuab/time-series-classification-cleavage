@@ -60,7 +60,7 @@ conda deactivate
 │   ├── classify_sktime.ipynb # Testing convolution-based classifiers using sktime library
 │   ├── classify.ipynb ##
 │   ├── hydra_convolution.ipynb # Convolution used in Hydra
-│   ├── interpret.ipynb ## Check which part in the multivariate is important for classification
+│   ├── interpret.ipynb # Check which subsequence in the multivariate time series is important for classification
 │   ├── mtsccleav.py # General library used for this project
 │   ├── plot_cd.ipynb
 │   ├── prepare_datasets.ipynb ## Prepare the miRNA dataset
