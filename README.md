@@ -57,10 +57,10 @@ conda deactivate
 │   ├── classify_aeon.ipynb ## Testing convolution-based classifiers using aeon library
 │   ├── classify_sktime.ipynb ## Testing convolution-based classifiers using sktime library
 │   ├── classify.ipynb ##
-│   ├── hydra_convolution.ipynb ##
+│   ├── hydra_convolution.ipynb # Convolution used in Hydra
 │   ├── interpret.ipynb ## Check which part in the multivariate is important for classification
 │   ├── mtsccleav.py ## General library used for this project
-│   ├── plot_cd.ipynb ##
+│   ├── plot_cd.ipynb
 │   ├── prepare_datasets.ipynb ## Prepare the miRNA dataset
 │   ├── rocket_convolution_examples.ipynb ## Convolution examples for Rocket
 │   ├── sota ## Compare the result with the SOTA, DiCleave
