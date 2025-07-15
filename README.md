@@ -8,6 +8,7 @@
     - The "scissors" are the human Dicer.
 
 ![The overall pipeline of this study.](figures/pipeline.pptx.svg)
+<img src="figures/pipeline.pptx.svg" alt="The overall pipeline of this study." width="400" height="300">
 
 # Notifications
 Dates on [AoE](https://www.timeanddate.com/time/zones/aoe) Time Zone
