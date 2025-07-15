@@ -62,7 +62,7 @@ conda deactivate
 │   ├── mtsccleav.py ## General library used for this project
 │   ├── plot_cd.ipynb
 │   ├── prepare_datasets.ipynb ## Prepare the miRNA dataset
-│   ├── rocket_convolution_examples.ipynb ## Convolution examples for Rocket
+│   ├── rocket_convolution_examples.ipynb # Convolution examples for ROCKET
 │   ├── sota ## Compare the result with the SOTA, DiCleave
 │   │   ├── DiCleave-data ##
 │   │   ├── DiCleave-main ##
