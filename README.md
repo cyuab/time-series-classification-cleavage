@@ -47,6 +47,11 @@ conda env remove -n mtsccleav
 conda env list
 # Deactivate the environment
 conda deactivate
+# Export your active environment to a new file:
+conda env export > environment.yml
+# Readers can make new environment from our environment. 
+# But different platforms may have their own platform-specific packages that may cause error if importing `environments.yml` directly.
+conda env create --name envname --file=environments.yml
 ```
 # Project Structure
 - Important folders and files in this repository are listed as belows:
@@ -63,16 +68,17 @@ conda deactivate
 │   ├── interpret.ipynb # Check which subsequence in the multivariate time series is important for classification
 │   ├── mtsccleav.py # General library used for this project
 │   ├── plot_cd.ipynb
-│   ├── prepare_datasets.ipynb ## Prepare the miRNA dataset
+│   ├── prepare_datasets.ipynb # Prepare the miRNA dataset
 │   ├── rocket_convolution_examples.ipynb # Convolution examples for ROCKET
 │   ├── sota # Compare the result with the SOTA, DiCleave
 │   │   ├── DiCleave-data # Store our training data for DiCleave and results returned by DiCleave
 │   │   ├── DiCleave-main # This is created by unzipping "DiCleave-main-e512d74.zip"
 │   │   ├── DiCleave-main-e512d74.zip # With the latest commit (e512d74), accessed on 2025-06-17
 │   │   ├── evaluate_dicleave.ipynb # It should be placed inside folder "DiCleave-main" for correct path.
-│   ├── test_transformations.ipynb ##
+│   ├── test_transformations.ipynb
 │   └── transformations.py # time series transformation methods
 ├── data
+├── environment.yml # Conda environment file.
 ├── figures
 └── README.md # This page.
 ```
