@@ -1,4 +1,4 @@
-# MTSCCleave: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites
+# MTSCCleave: a Multivariate Time Series Classification (MTSC)-based Method for Predicting Human Dicer Cleavage Sites
 <!-- https://stackoverflow.com/questions/39777166/display-pdf-image-in-markdown -->
 <!-- for d in *.pdf ; do inkscape --without-gui --file=$d --export-plain-svg=${d%.*}.svg ; done -->
 <!-- ![Predicted secondary structure of the sequence S of pri-miRNA “hsa-let-7a-1".](figures/hsa-let-7a-1_ss.svg.pptx.svg) -->
@@ -36,6 +36,8 @@ python -m pip install viennarna
 pip install -U aeon[all_extras]
 # If "no matches found" error appears, try below command.
 pip install -U aeon"[all_extras]"
+# For testing lightgbm classifier
+pip install lightgbm
 ```
 Other useful commands
 ```
@@ -54,8 +56,8 @@ conda deactivate
 ```bash
 .
 ├── code
-│   ├── classify_aeon.ipynb ## Testing convolution-based classifiers using aeon library
-│   ├── classify_sktime.ipynb ## Testing convolution-based classifiers using sktime library
+│   ├── classify_aeon.ipynb # Testing convolution-based classifiers using aeon library
+│   ├── classify_sktime.ipynb # Testing convolution-based classifiers using sktime library
 │   ├── classify.ipynb ##
 │   ├── hydra_convolution.ipynb # Convolution used in Hydra
 │   ├── interpret.ipynb ## Check which part in the multivariate is important for classification
@@ -118,7 +120,7 @@ Some biological computation libraries:
 - It will be updated after paper acceptance.
 
 # MISC
-Testing for tsai
+For testing tsai
 ```
 pip install tsai
 # Downgrade fastcore for compatibility with tsai 
