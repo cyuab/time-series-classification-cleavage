@@ -74,7 +74,8 @@ conda env create --name envname --file=environments.yml
 │   │   ├── DiCleave-data # Store our training data for DiCleave and results returned by DiCleave
 │   │   ├── DiCleave-main # This is created by unzipping "DiCleave-main-e512d74.zip"
 │   │   ├── DiCleave-main-e512d74.zip # With the latest commit (e512d74), accessed on 2025-06-17
-│   │   ├── evaluate_dicleave.ipynb # It should be placed inside folder "DiCleave-main" for correct path.
+│   │   ├── evaluate_dicleave.ipynb
+│   │   └── run_and_measure.sh # It should be placed inside folder "DiCleave-main" for correct path.
 │   ├── test_transformations.ipynb
 │   └── transformations.py # time series transformation methods
 ├── data
