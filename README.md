@@ -1,15 +1,19 @@
 # MTSCCleave: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites
 <!-- https://stackoverflow.com/questions/39777166/display-pdf-image-in-markdown -->
 <!-- for d in *.pdf ; do inkscape --without-gui --file=$d --export-plain-svg=${d%.*}.svg ; done -->
-![hsa-let-7a-1 with Secondary Structure](figures/hsa-let-7a-1_ss.svg.pptx.svg)
+![Predicted secondary structure of the sequence S of pri-miRNA “hsa-let-7a-1](figures/hsa-let-7a-1_ss.svg.pptx.svg)
 - This figure shows the secondary structure of pre-miRNA "hsa-let-7a-1". The two scissor symbols indicates the two cleavage sites on 5' arm and 3' arm.
     - The colors on the nodes reflect the probability of the base pair in this predicted secondary structure.
     - The 27-28 bond (i.e., the bond between 27th nucleotide and 28th nucleotide) and the 56-57 bond are the cleavage sites.
     - The "scissors" are the human Dicer.
 
-## Notifications
+![The overall pipeline of this study.](figures/pipeline.pptx.svg)
 
-## Installation
+# Notifications
+Dates on [AoE](https://www.timeanddate.com/time/zones/aoe) Time Zone
+- 2025-07-14 Submitted to [BMC Bioinformatics](https://bmcbioinformatics.biomedcentral.com/).
+
+# Install
 ```
 conda create -n mtsccleav python=3.12
 conda activate mtsccleav
@@ -33,7 +37,7 @@ conda env list
 # Deactivate the environment
 conda deactivate
 ```
-## Structure of this repository
+# Project Structure
 ```bash
 .
 ├── code
@@ -51,10 +55,32 @@ conda deactivate
 ├── figures
 ├── README.md
 └── results
+
+.
+├── code
+│   ├── classify_aeon.ipynb ##
+│   ├── classify_sktime.ipynb ##
+│   ├── classify.ipynb ##
+│   ├── hydra_convolution.ipynb ##
+│   ├── interpret.ipynb ##
+│   ├── mtsccleav.py ##
+│   ├── plot_cd.ipynb ##
+│   ├── prepare_datasets.ipynb ##
+│   ├── rocket_convolution_examples.ipynb ##
+│   ├── sota ##
+│   │   ├── DiCleave-data ##
+│   │   ├── DiCleave-main ##
+│   │   ├── DiCleave-main-e512d74.zip ##
+│   │   ├── evaluate_dicleave.ipynb ##
+│   ├── test_transformations.ipynb ##
+│   └── transformations.py ##
+├── data ##
+├── figures ##
+└── README.md ##
 ```
-## Corresponding paper
-### Figures in the paper
-## Resources
+# Corresponding paper
+## Figures in the paper
+# Resources
 Other studies related to human Dicer cleavage site prediction (Newest first):
 - [DiCleavePlus](https://github.com/MGuard0303/DiCleavePlus)
 - [DiCleave](https://github.com/MGuard0303/DiCleave)
@@ -76,13 +102,14 @@ Some biological computation libraries:
 - [ViennaRNA](https://viennarna.readthedocs.io/en/latest/index.html)
 - [Biopython](https://biopython.org/)
 
-## Pending tasks
+# Pending tasks
 1. Upload the datasets to https://timeseriesclassification.com after publication.
-1. Update the Authors' information.
 1. Make a video (YouTube) presentation.
-## Contacts
 
-## MISC
+# Contacts
+- It will be updated after paper acceptance.
+
+# MISC
 Testing for tsai
 ```
 pip install tsai
@@ -98,8 +125,3 @@ pip install --force-reinstall fastcore==1.5.29
 pip install xgboost
 pip install lightgbm
 ```
-
-For project management style reference:
-- https://github.com/mrdbourke/zero-to-mastery-ml/blob/master/README.md
-
-testing2
