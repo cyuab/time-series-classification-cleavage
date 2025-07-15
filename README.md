@@ -2,7 +2,8 @@
 <!-- https://stackoverflow.com/questions/39777166/display-pdf-image-in-markdown -->
 <!-- for d in *.pdf ; do inkscape --without-gui --file=$d --export-plain-svg=${d%.*}.svg ; done -->
 <!-- ![Predicted secondary structure of the sequence S of pri-miRNA “hsa-let-7a-1".](figures/hsa-let-7a-1_ss.svg.pptx.svg) -->
-<img src="figures/hsa-let-7a-1_ss.svg.pptx.svg" alt="Predicted secondary structure of the sequence S of pri-miRNA "hsa-let-7a-1"." width="400" height="300">
+<img src="figures/hsa-let-7a-1_ss.svg.pptx.svg" alt="Predicted secondary structure of the sequence S of pri-miRNA hsa-let-7a-1." width="400" height="300">
+
 - This figure shows the predicted secondary structure of the sequence of pre-miRNA "hsa-let-7a-1". The two scissor symbols indicates the two cleavage sites on 5' arm and 3' arm.
     - The colors on the nodes reflect the probability of the base pair in this predicted secondary structure.
     - The 27-28 bond (i.e., the bond between 27th nucleotide and 28th nucleotide) and the 56-57 bond are the cleavage sites.
@@ -10,6 +11,7 @@
 
 <!-- ![The overall pipeline of this study.](figures/pipeline.pptx.svg) -->
 <img src="figures/pipeline.pptx.svg" alt="The overall pipeline of this study." width="400" height="300">
+
 The overall pipeline of this study.
 MTSCCleav consists of three parts: time series encoding, time series transformation, and classification. 
 - We introduced nine encoding methods to convert RNA data to time series.
@@ -48,42 +50,25 @@ conda deactivate
 ```bash
 .
 ├── code
-│   ├── classify_aeon.ipynb # Testing convolution-based classifiers using aeon library
-│   ├── classify_sktime.ipynb # Testing convolution-based classifiers using sktime library
-│   ├── classify.ipynb
-│   ├── interpret.ipynb # Check which part in the multivariate is important for classification
-│   ├── mtsccleav.py # General library used for this project
-│   ├── prepare_datasets.ipynb # Prepare the miRNA dataset
-│   ├── rocket_convolution_ex.ipynb # Convolution examples for Rocket
-│   ├── sota
-│   │   ├── DiCleave-data # Compare the result with the SOTA, DiCleave
-│   ├── transformations.py # time series transformation methods
-├── data
-├── figures
-├── README.md
-└── results
-
-.
-├── code
-│   ├── classify_aeon.ipynb ##
-│   ├── classify_sktime.ipynb ##
+│   ├── classify_aeon.ipynb ## Testing convolution-based classifiers using aeon library
+│   ├── classify_sktime.ipynb ## Testing convolution-based classifiers using sktime library
 │   ├── classify.ipynb ##
 │   ├── hydra_convolution.ipynb ##
-│   ├── interpret.ipynb ##
-│   ├── mtsccleav.py ##
+│   ├── interpret.ipynb ## Check which part in the multivariate is important for classification
+│   ├── mtsccleav.py ## General library used for this project
 │   ├── plot_cd.ipynb ##
-│   ├── prepare_datasets.ipynb ##
-│   ├── rocket_convolution_examples.ipynb ##
-│   ├── sota ##
+│   ├── prepare_datasets.ipynb ## Prepare the miRNA dataset
+│   ├── rocket_convolution_examples.ipynb ## Convolution examples for Rocket
+│   ├── sota ## Compare the result with the SOTA, DiCleave
 │   │   ├── DiCleave-data ##
 │   │   ├── DiCleave-main ##
 │   │   ├── DiCleave-main-e512d74.zip ##
 │   │   ├── evaluate_dicleave.ipynb ##
 │   ├── test_transformations.ipynb ##
-│   └── transformations.py ##
-├── data ##
-├── figures ##
-└── README.md ##
+│   └── transformations.py ## time series transformation methods
+├── data
+├── figures
+└── README.md # This page.
 ```
 # Corresponding paper
 ## Figures in the paper
