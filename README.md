@@ -47,6 +47,10 @@ conda env list
 conda deactivate
 ```
 # Project Structure
+- Important folders and files in this repository are listed as belows:
+- Readers should visit the files in this order: `prepare_datasets.ipynb` -> `classify.ipynb` -> `plot_cd.ipynb` -> `interpret.ipynb`.
+- To get familiar with the time series libraries, go to `classify_aeon.ipynb` and `classify_sktime.ipynb`.
+- To explore about ROCKET-based classifiers, go to `rocket_convolution_examples.ipynb` and `hydra_convolution.ipynb`.
 ```bash
 .
 ├── code
@@ -71,7 +75,19 @@ conda deactivate
 └── README.md # This page.
 ```
 # Corresponding paper
-## Figures in the paper
+## Figures/ Tables in the paper
+### Figures
+- Figure 4: `rocket_convolution_examples.ipynb`
+- Figure 5: `hydra_convolution.ipynb`
+- Figures 6, 7, 8: `plot_cd.ipynb`
+- Figure 9: `interpret.ipynb` 
+
+### Tables
+- Tables 1, 2, 3: `prepare_datasets.ipynb`
+- Table 4: `transformations.py`
+- Tables 6, 7: `classify.ipynb`
+- Table 8: `classify.ipynb`, `evaluate_dicleave.ipynb`
+
 # Resources
 Other studies related to human Dicer cleavage site prediction (Newest first):
 - [DiCleavePlus](https://github.com/MGuard0303/DiCleavePlus)
