@@ -4,7 +4,7 @@
 - [DiCleave](https://github.com/MGuard0303/DiCleave) (e512d74)
 <!-- - [ReCGBM](https://github.com/ryuu90/ReCGBM) (018f7a7) -->
 
-We have downloaded its latest version (commit) and placed in this folder.
+We have downloaded its latest version (commit) `DiCleave-main-e512d74.zip` and placed in this folder.
 
 Create the environment for testing Dicleave
 ```

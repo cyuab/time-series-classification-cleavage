@@ -55,9 +55,9 @@ conda env create --name envname --file=environments.yml
 ```
 # Project Structure
 - Important folders and files in this repository are listed as belows:
-- Readers should visit the files in this order: `prepare_datasets.ipynb` -> `classify.ipynb` -> `plot_cd.ipynb` -> `interpret.ipynb`.
-- To get familiar with the time series libraries, go to `classify_aeon.ipynb` and `classify_sktime.ipynb`.
-- To explore about ROCKET-based classifiers, go to `rocket_convolution_examples.ipynb` and `hydra_convolution.ipynb`.
+- Readers should visit the files in this order: [prepare_datasets.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/prepare_datasets.ipynb) -> [classify.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify.ipynb) -> [plot_cd.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/plot_cd.ipynb) -> [interpret.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/interpret.ipynb).
+- To get familiar with the time series libraries, go to [classify_aeon.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify_aeon.ipynb) and [classify_sktime.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify_sktime.ipynb).
+- To explore about ROCKET-based classifiers, go to [rocket_convolution_examples.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/rocket_convolution_examples.ipynb) and [hydra_convolution.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/hydra_convolution.ipynb).
 ```bash
 .
 ├── code
