@@ -86,16 +86,16 @@ conda env create --name envname --file=environments.yml
 # Corresponding paper
 ## Figures/ Tables in the paper
 ### Figures
-- Figure 4: `rocket_convolution_examples.ipynb`
-- Figure 5: `hydra_convolution.ipynb`
-- Figures 6, 7, 8: `plot_cd.ipynb`
-- Figure 9: `interpret.ipynb` 
+- Figure 4: [rocket_convolution_examples.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/rocket_convolution_examples.ipynb)
+- Figure 5: [hydra_convolution.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/hydra_convolution.ipynb)
+- Figures 6, 7, 8: [plot_cd.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/plot_cd.ipynb)
+- Figure 9: [interpret.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/interpret.ipynb) 
 
 ### Tables
-- Tables 1, 2, 3: `prepare_datasets.ipynb`
-- Table 4: `transformations.py`
-- Tables 6, 7: `classify.ipynb`
-- Table 8: `classify.ipynb`, `evaluate_dicleave.ipynb`
+- Tables 1, 2, 3: [prepare_datasets.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/prepare_datasets.ipynb)
+- Table 4: [transformations.py](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/transformations.py)
+- Tables 6, 7: [classify.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify.ipynb)
+- Table 8: [classify.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify.ipynb), [evaluate_dicleave.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/sota/evaluate_dicleave.ipynb)
 
 # Resources
 Other studies related to human Dicer cleavage site prediction (Newest first):
