@@ -93,7 +93,7 @@ conda env create --name envname --file=environments.yml
 
 ### Tables
 - Tables 1, 2, 3: [prepare_datasets.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/prepare_datasets.ipynb)
-- Table 4: [transformations.py](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/transformations.py)
+- Table 4: [transformations.py](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/transformations.py), [test_transformations.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/test_transformations.ipynb)
 - Tables 6, 7: [classify.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify.ipynb)
 - Table 8: [classify.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify.ipynb), [evaluate_dicleave.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/sota/evaluate_dicleave.ipynb)
 
