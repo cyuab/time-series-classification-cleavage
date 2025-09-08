@@ -22,6 +22,10 @@ MTSCCleav consists of three parts: time series encoding, time series transformat
 Dates on [AoE](https://www.timeanddate.com/time/zones/aoe) Time Zone
 - 2025-07-14 Submitted to [BMC Bioinformatics](https://bmcbioinformatics.biomedcentral.com/).
 
+## Pending Tasks
+- [] Upload the datasets to https://timeseriesclassification.com after publication.
+- [] Make a video (YouTube) presentation.
+
 # Install
 ```
 conda create -n mtsccleav python=3.12
@@ -37,7 +41,6 @@ pip install -U aeon[all_extras]
 # If "no matches found" error appears, try below command.
 pip install -U aeon"[all_extras]"
 # For testing lightgbm classifier
-pip install lightgbm
 ```
 Other useful commands
 ```
@@ -109,19 +112,15 @@ Some useful time series libraries:
 - [aeon](https://www.aeon-toolkit.org/en/stable/index.html)
 - [tsai](https://timeseriesai.github.io/tsai/)
 - [pyts](https://pyts.readthedocs.io/en/stable/index.html)
-- time series distances
-    - [DTAIDistance](https://dtaidistance.readthedocs.io/en/latest/)
-- Others
-    - [stumpy](https://stumpy.readthedocs.io/en/latest/) (Matrix Profile)
-    - [SAX-VSM](https://jmotif.github.io/sax-vsm_site/) (a.k.a. jmotif, in Java)
+- [DTAIDistance](https://dtaidistance.readthedocs.io/en/latest/) (Distance Measure)
+- [stumpy](https://stumpy.readthedocs.io/en/latest/) (Matrix Profile)
+- [SAX-VSM](https://jmotif.github.io/sax-vsm_site/) (a.k.a. jmotif, in Java)
     
 Some biological computation libraries:
 - [ViennaRNA](https://viennarna.readthedocs.io/en/latest/index.html)
 - [Biopython](https://biopython.org/)
 
-# Pending tasks
-1. Upload the datasets to https://timeseriesclassification.com after publication.
-1. Make a video (YouTube) presentation.
+
 
 # Contacts
 - It will be updated after paper acceptance.
