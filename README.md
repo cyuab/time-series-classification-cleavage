@@ -19,12 +19,7 @@ MTSCCleav consists of three parts: time series encoding, time series transformat
 - Ridge Classifier was used for classification.
 
 # Notifications
-Dates on [AoE](https://www.timeanddate.com/time/zones/aoe) Time Zone
-- 2025-07-14 Submitted to [BMC Bioinformatics](https://bmcbioinformatics.biomedcentral.com/).
 
-## Pending Tasks
-- [] Upload the datasets to https://timeseriesclassification.com after publication.
-- [] Make a video (YouTube) presentation.
 
 # Install
 ```
