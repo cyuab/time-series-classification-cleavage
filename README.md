@@ -1,8 +1,9 @@
 # MTSCCleave: a Multivariate Time Series Classification (MTSC)-based Method for Predicting Human Dicer Cleavage Sites
+
 <!-- https://stackoverflow.com/questions/39777166/display-pdf-image-in-markdown -->
 <!-- for d in *.pdf ; do inkscape --without-gui --file=$d --export-plain-svg=${d%.*}.svg ; done -->
 <!-- ![Predicted secondary structure of the sequence S of pri-miRNA “hsa-let-7a-1".](figures/hsa-let-7a-1_ss.svg.pptx.svg) -->
-<img src="figures/hsa-let-7a-1_ss.svg.pptx.svg" alt="Predicted secondary structure of the sequence S of pri-miRNA hsa-let-7a-1." width="400" height="300">
+<img src="figures/hsa-let-7a-1_ss.svg.pptx.svg" alt="Predicted secondary structure of the sequence S of pri-miRNA hsa-let-7a-1." width="400">
 
 This figure shows the predicted secondary structure of the sequence of pre-miRNA "hsa-let-7a-1". The two scissor symbols indicates the two cleavage sites on 5' arm and 3' arm.
 - The colors on the nodes reflect the probability of the base pair in this predicted secondary structure.
@@ -10,7 +11,7 @@ This figure shows the predicted secondary structure of the sequence of pre-miRNA
 - The "scissors" are the human Dicer.
 
 <!-- ![The overall pipeline of this study.](figures/pipeline.pptx.svg) -->
-<img src="figures/pipeline.pptx.svg" alt="The overall pipeline of this study." width="400" height="300">
+<img src="figures/pipeline.pptx.svg" alt="The overall pipeline of this study." width="400">
 
 The overall pipeline of this study.
 MTSCCleav consists of three parts: time series encoding, time series transformation, and classification. 
@@ -18,10 +19,10 @@ MTSCCleav consists of three parts: time series encoding, time series transformat
 - Five ROCKET-based methods were used for time series transformation. 
 - Ridge Classifier was used for classification.
 
-# Notifications
+## Notifications
 
+## Installation
 
-# Install
 ```
 conda create -n mtsccleav python=3.12
 conda activate mtsccleav
@@ -37,6 +38,7 @@ pip install -U aeon[all_extras]
 pip install -U aeon"[all_extras]"
 # For testing lightgbm classifier
 ```
+
 Other useful commands
 ```
 # Delete the environment if needed.
@@ -51,9 +53,10 @@ conda env export > environment.yml
 # But different platforms may have their own platform-specific packages that may cause error if importing `environments.yml` directly.
 conda env create --name envname --file=environments.yml
 ```
-# Project Structure
-- Important folders and files in this repository are listed as belows:
-- Readers should visit the files in this order: [prepare_datasets.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/prepare_datasets.ipynb) -> [classify.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify.ipynb) -> [plot_cd.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/plot_cd.ipynb) -> [interpret.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/interpret.ipynb).
+
+## Project Structure
+
+- Readers should visit the files in this order: [prepare_datasets.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/prepare_datasets.ipynb) → [classify.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify.ipynb) → [plot_cd.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/plot_cd.ipynb) → [interpret.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/interpret.ipynb).
 - To get familiar with the time series libraries, go to [classify_aeon.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify_aeon.ipynb) and [classify_sktime.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify_sktime.ipynb).
 - To explore about ROCKET-based classifiers, go to [rocket_convolution_examples.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/rocket_convolution_examples.ipynb) and [hydra_convolution.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/hydra_convolution.ipynb).
 ```bash
@@ -79,23 +82,26 @@ conda env create --name envname --file=environments.yml
 ├── data
 ├── environment.yml # Conda environment file.
 ├── figures
-└── README.md # This page.
+└── README.md
 ```
-# Corresponding paper
-## Figures/ Tables in the paper
-### Figures
+## Corresponding Paper
+
+### Data/Code for the Figures/Tables
+
+Figures
 - Figure 4: [rocket_convolution_examples.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/rocket_convolution_examples.ipynb)
 - Figure 5: [hydra_convolution.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/hydra_convolution.ipynb)
 - Figures 6, 7, 8: [plot_cd.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/plot_cd.ipynb)
 - Figure 9: [interpret.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/interpret.ipynb) 
 
-### Tables
+Tables
 - Tables 1, 2, 3: [prepare_datasets.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/prepare_datasets.ipynb)
 - Table 4: [transformations.py](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/transformations.py), [test_transformations.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/test_transformations.ipynb)
 - Tables 6, 7: [classify.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify.ipynb)
 - Table 8: [classify.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/classify.ipynb), [evaluate_dicleave.ipynb](https://github.com/cyuab/time-series-classification-cleavage/blob/main/code/sota/evaluate_dicleave.ipynb)
 
-# Resources
+## Resources
+
 Other studies related to human Dicer cleavage site prediction (Newest first):
 - [DiCleavePlus](https://github.com/MGuard0303/DiCleavePlus)
 - [DiCleave](https://github.com/MGuard0303/DiCleave)
@@ -116,11 +122,8 @@ Some biological computation libraries:
 - [Biopython](https://biopython.org/)
 
 
+## MISC
 
-# Contacts
-- It will be updated after paper acceptance.
-
-# MISC
 For testing tsai:
 ```
 pip install tsai
