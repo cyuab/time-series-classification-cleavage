@@ -1,36 +1,86 @@
-code/testing.ipynb
+*temp*
 
-code/testing/
-__pycache__/
-code/__pycache__/
-code/sota/DiCleavePlus-main/
 code/sota/DiCleave-main/
-code/sota/ReCGBM-master/
 
-# General
+# -----------------------
+# Python
+# -----------------------
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# -----------------------
+# R
+# -----------------------
+# R data files
+*.RData
+*.Rhistory
+*.Rapp.history
+.RDataTmp
+
+# R environment files
+.Rproj.user/
+.Renviron
+.Rprofile
+
+# RStudio project files
+*.Rproj
+
+# Packrat / renv (R dependency management)
+packrat/
+renv/
+renv.lock
+
+# -----------------------
+# Jupyter Notebook
+# -----------------------
+.ipynb_checkpoints/
+
+# -----------------------
+# macOS
+# -----------------------
 .DS_Store
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
 Icon
-
-
-# Thumbnails
 ._*
-
-# Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# -----------------------
+# Editors / IDEs
+# -----------------------
+# VS Code
+.vscode/
+.history/
+
+# PyCharm / IntelliJ
+.idea/
+
+# -----------------------
+# Others
+# -----------------------
+*.log
