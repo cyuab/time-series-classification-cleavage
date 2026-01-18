@@ -11,8 +11,8 @@ This figure shows the predicted secondary structure of the sequence of pre-miRNA
 <img src="figures/pipeline.pptx.svg" alt="The overall pipeline of this study." width="400">
 
 The overall pipeline of this study.
-MTSCCleav consists of three parts: time series encoding, time series transformation, and classification. 
-- We introduced nine encoding methods to convert RNA data to time series.
+MTSCCleav consists of three parts: time series encoding, time series transformation (encoding), and classification. 
+- Nine encoding methods to convert RNA data to time series were introduced.
 - Five ROCKET-based methods were used for time series transformation. 
 - Ridge Classifier was used for classification.
 
@@ -82,6 +82,10 @@ conda env create --name envname --file=environments.yml
 └── README.md
 ```
 ## Corresponding Paper
+
+Coleman Yu, Raymond Chi-Wing Wong, and Tatsuya Akutsu,  
+"MTSCCleave: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites",
+IEEE Access, 2026
 
 ### Data/Code for the Figures/Tables
 
