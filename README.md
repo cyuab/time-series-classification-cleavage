@@ -105,9 +105,16 @@ Other studies related to human Dicer cleavage site prediction (Newest first):
 
 Some useful time series libraries:
 - [sktime](https://www.sktime.net/en/stable/)
+  - [Introduction to sktime](https://www.sktime.net/en/latest/examples/00_sktime_intro.html) 
+  - [Time Series Classification, Regression, Clustering & More](https://www.sktime.net/en/stable/examples/02_classification.html)
+  - [Demo of ROCKET transform](https://www.sktime.net/en/latest/examples/transformation/rocket.html)
 - [tslearn](https://tslearn.readthedocs.io/en/stable/)
 - [aeon](https://www.aeon-toolkit.org/en/stable/index.html)
+  - [Convolution based time series classification in aeon](https://www.aeon-toolkit.org/en/stable/examples/classification/convolution_based.html)
+  - [The ROCKET transform](https://www.aeon-toolkit.org/en/latest/examples/transformations/rocket.html)
+  - [MiniRocket](https://www.aeon-toolkit.org/en/stable/examples/transformations/minirocket.html)
 - [tsai](https://timeseriesai.github.io/tsai/)
+  - [ROCKET: a new state-of-the-art time series classifier](https://colab.research.google.com/github/timeseriesAI/tsai/blob/master/tutorial_nbs/02_ROCKET_a_new_SOTA_classifier.ipynb) | [Tutorial notebooks](https://timeseriesai.github.io/tsai/tutorials.html)
 - [pyts](https://pyts.readthedocs.io/en/stable/index.html)
 - [DTAIDistance](https://dtaidistance.readthedocs.io/en/latest/) (Distance Measure)
 - [stumpy](https://stumpy.readthedocs.io/en/latest/) (Matrix Profile)
@@ -116,7 +123,6 @@ Some useful time series libraries:
 Some biological computation libraries:
 - [ViennaRNA](https://viennarna.readthedocs.io/en/latest/index.html)
 - [Biopython](https://biopython.org/)
-
 
 ## MISC
 
