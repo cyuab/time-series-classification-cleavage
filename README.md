@@ -1,12 +1,11 @@
-# MTSCCleave: a Multivariate Time Series Classification (MTSC)-based Method for Predicting Human Dicer Cleavage Sites
+# MTSCCleav: a Multivariate Time Series Classification (MTSC)-based Method for Predicting Human Dicer Cleavage Sites
 
 <img src="figures/hsa-let-7a-1_ss.svg.pptx.svg" alt="Predicted secondary structure of the sequence S of pri-miRNA hsa-let-7a-1." width="400">
 
-This figure shows the predicted secondary structure of the sequence of pre-miRNA "hsa-let-7a-1". The two scissor symbols indicates the two cleavage sites on 5' arm and 3' arm.
+This figure shows the predicted secondary structure of the sequence of pre-miRNA "hsa-let-7a-1". 
 - The colors on the nodes reflect the probability of the base pair in this predicted secondary structure.
-- The 27-28 bond (i.e., the bond between 27th nucleotide and 28th nucleotide) and the 56-57 bond are the cleavage sites.
-- The "scissors" are the human Dicer.
-- We would like to predict whether a subsequence of a given pre-miRNA contains a cleavage site at the center.
+- The two scissor symbols indicate the two Dicer cleavage sites on 5' arm (i.e., the 56-57 bond) and 3' arm (i.e., the 27-28 bond).
+- We would like to predict whether a subsequence contains a cleavage site at the center.
 
 <img src="figures/pipeline.pptx.svg" alt="The overall pipeline of this study." width="400">
 
