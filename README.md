@@ -1,8 +1,5 @@
 # MTSCCleave: a Multivariate Time Series Classification (MTSC)-based Method for Predicting Human Dicer Cleavage Sites
 
-<!-- https://stackoverflow.com/questions/39777166/display-pdf-image-in-markdown -->
-<!-- for d in *.pdf ; do inkscape --without-gui --file=$d --export-plain-svg=${d%.*}.svg ; done -->
-<!-- ![Predicted secondary structure of the sequence S of pri-miRNA “hsa-let-7a-1".](figures/hsa-let-7a-1_ss.svg.pptx.svg) -->
 <img src="figures/hsa-let-7a-1_ss.svg.pptx.svg" alt="Predicted secondary structure of the sequence S of pri-miRNA hsa-let-7a-1." width="400">
 
 This figure shows the predicted secondary structure of the sequence of pre-miRNA "hsa-let-7a-1". The two scissor symbols indicates the two cleavage sites on 5' arm and 3' arm.
@@ -10,7 +7,6 @@ This figure shows the predicted secondary structure of the sequence of pre-miRNA
 - The 27-28 bond (i.e., the bond between 27th nucleotide and 28th nucleotide) and the 56-57 bond are the cleavage sites.
 - The "scissors" are the human Dicer.
 
-<!-- ![The overall pipeline of this study.](figures/pipeline.pptx.svg) -->
 <img src="figures/pipeline.pptx.svg" alt="The overall pipeline of this study." width="400">
 
 The overall pipeline of this study.
@@ -19,7 +15,7 @@ MTSCCleav consists of three parts: time series encoding, time series transformat
 - Five ROCKET-based methods were used for time series transformation. 
 - Ridge Classifier was used for classification.
 
-## Notifications
+<!-- ## Notifications -->
 
 ## Installation
 
@@ -103,9 +99,9 @@ Tables
 ## Resources
 
 Other studies related to human Dicer cleavage site prediction (Newest first):
-- [DiCleavePlus](https://github.com/MGuard0303/DiCleavePlus)
-- [DiCleave](https://github.com/MGuard0303/DiCleave)
-- [ReCGBM](https://github.com/ryuu90/ReCGBM)
+- [DiCleavePlus](https://github.com/MGuard0303/DiCleavePlus) (Different Problem Setting)
+- [DiCleave](https://github.com/MGuard0303/DiCleave) (SOTA)
+- [ReCGBM](https://github.com/ryuu90/ReCGBM) (Previous work of SOTA)
 
 Some useful time series libraries:
 - [sktime](https://www.sktime.net/en/stable/)
@@ -139,3 +135,13 @@ pip install --force-reinstall fastcore==1.5.29
 pip install xgboost
 pip install lightgbm
 ```
+
+## Additional References
+
+Sorted by year (Newest First)
+
+Encoding
+- [yu2018survey] "Survey on encoding schemes for genomic data representation and feature learning—from signal processing to machine learning"
+- [ahmad2017dna] "From DNA to protein: Why genetic code context of nucleotides for DNA signal processing? A review"
+- [vinga2014information] "Information theory applications for biological sequence analysis"
+- [galleani2010minimum] "The Minimum Entropy Mapping Spectrum of a DNA Sequence"
