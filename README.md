@@ -82,9 +82,9 @@ conda env create --name envname --file=environments.yml
 ```
 ## Corresponding Paper
 
-Coleman Yu, Raymond Chi-Wing Wong, and Tatsuya Akutsu,  
-"MTSCCleave: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites",  
-IEEE Access, 2026  
+[Coleman Yu, Raymond Chi-Wing Wong, and Tatsuya Akutsu,  
+"MTSCCleav: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites",  
+IEEE Access, 2026](https://ieeexplore.ieee.org/document/11359221)  
 ([pdf](https://github.com/colemanyu/time-series-classification-cleavage-paper/blob/main/time_series_classification_cleavage_paper.pdf))([code](https://github.com/colemanyu/time-series-classification-cleavage))(slides)([TeX](https://github.com/colemanyu/time-series-classification-cleavage-paper))
 
 ### Data/Code for the Figures/Tables
@@ -146,13 +146,3 @@ pip install --force-reinstall fastcore==1.5.29
 pip install xgboost
 pip install lightgbm
 ```
-
-## Additional References
-
-Sorted by year (Newest First)
-
-Encoding
-- [yu2018survey] "Survey on encoding schemes for genomic data representation and feature learning—from signal processing to machine learning"
-- [ahmad2017dna] "From DNA to protein: Why genetic code context of nucleotides for DNA signal processing? A review"
-- [vinga2014information] "Information theory applications for biological sequence analysis"
-- [galleani2010minimum] "The Minimum Entropy Mapping Spectrum of a DNA Sequence"
