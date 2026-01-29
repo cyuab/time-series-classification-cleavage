@@ -84,7 +84,7 @@ conda env create --name envname --file=environments.yml
 
 [Coleman Yu, Raymond Chi-Wing Wong, and Tatsuya Akutsu,  
 "MTSCCleav: a Multivariate Time Series Classification (MTSC)-based method for predicting human Dicer cleavage sites",  
-IEEE Access, 2026](https://ieeexplore.ieee.org/document/11359221)  
+IEEE Access, pp11048 - 11063, Vol.14, 2026](https://ieeexplore.ieee.org/document/11359221)  
 ([pdf](https://github.com/colemanyu/time-series-classification-cleavage-paper/blob/main/time_series_classification_cleavage_paper.pdf))([code](https://github.com/colemanyu/time-series-classification-cleavage))(slides)([TeX](https://github.com/colemanyu/time-series-classification-cleavage-paper))
 
 ### Data/Code for the Figures/Tables
